@@ -1,0 +1,17 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+h1 {
+    margin: 0;
+    line-height: 1;
+    letter-spacing: 1.3rem;
+    font-weight: 400;
+    font-size: 4rem;
+    text-transform: uppercase;
+    @include m.tablet { 
+        font-size: 5.4rem;
+    }
+}
+p {
+    line-height: 1.5;
+}

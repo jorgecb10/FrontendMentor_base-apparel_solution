@@ -1,0 +1,60 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.formulario {
+    display: flex;
+    align-items: center;
+    border-radius: 3rem;
+    border: .1rem solid v.$rojoDesaturado;
+    position: relative;
+
+    &__input {
+        padding: 1rem;
+        width: 80%;
+        border: none;
+        background-color: transparent;
+        outline: none;
+        color: v.$rojoDesaturado;
+        @include m.tablet { 
+            width: 85%;
+        }
+
+        &-error {
+            background-image: url('../img/icon-error.svg');
+            background-size: 2rem;
+            background-repeat: no-repeat;
+            background-position: right;
+        }
+    }
+
+    &__btn {
+        background: linear-gradient(to right, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+        border: none;
+        border-radius: 3rem;
+        box-shadow: 0px 5px 5px 5px transparentize(lighten(v.$rojoSuave, 26%), .2);
+        padding: 1.1rem 2.2rem;
+        cursor: pointer;
+        position: absolute;
+        right: -.1rem;
+        transition: background 0.3s ease;
+        &:hover {
+            background: linear-gradient(to right, lighten(hsl(0, 80%, 86%), 5%), lighten(hsl(0, 74%, 74%), 5%));
+            box-shadow: 0px 5px 5px 3px transparentize(lighten(v.$rojoDesaturado, 10%), .2);
+        }
+        @include m.tablet { 
+            padding: 1.1rem 3rem;
+        }
+    }
+
+    &__mensaje {
+        margin: .5rem 0 0 2rem;
+
+        &-correcto {
+            color: v.$verde;
+        }
+
+        &-error {
+            color: v.$rojoSuave;
+        }
+    }
+}

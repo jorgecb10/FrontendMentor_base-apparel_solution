@@ -1,0 +1,96 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.logo {
+    position: relative;
+
+    img {
+        width: auto;
+        position: absolute;
+        top: -8rem;
+
+        @include m.tablet { 
+            top: 5rem;
+        }
+    }
+}
+
+.base {
+
+    &__flex {
+        margin: 13rem 0 0 0;
+        display: flex;
+        flex-direction: column-reverse;
+        background-color: lighten(v.$rojoSuave, 30%);
+
+        @include m.tablet { 
+            background-color: unset;
+            margin: 0;
+            flex-direction: row;
+            align-items: center;
+            gap: 4rem;
+        }
+    }
+
+    &__contenido {
+        padding: 5rem 0;
+        @include m.tablet { 
+            max-width: 55rem;
+            padding: 5rem 0 5rem 2rem;
+        }
+        @include m.desktop { 
+            padding: 0;
+        }
+    }
+
+    &__heading {
+        color: v.$rojoGrisOscuro;
+        text-align: center;
+        span {
+            display: block;
+            font-weight: 300;
+            color: v.$rojoDesaturado;
+        }
+        @include m.tablet { 
+            text-align: left;
+        }
+    }
+
+    &__texto {
+        text-align: center;
+        color: v.$rojoDesaturado;
+        @include m.tablet { 
+            text-align: left;
+        }
+    }
+}
+
+.base__imagen {
+    background-size: cover;
+    background-repeat: no-repeat;
+    max-width: auto;
+    height: 25rem;
+    @include m.tablet { 
+        width: 61rem;
+        height: 100vh;
+        background-position: center;
+    }
+}
+.notavif.notwebp .base__imagen {
+    background-image: url(../img/hero-mobile.jpg);
+    @include m.tablet { 
+        background-image: url(../img/hero-desktop.jpg);
+    }
+}
+.webp .base__imagen {
+    background-image: url('../img/hero-mobile.webp');
+    @include m.tablet { 
+        background-image: url('../img/hero-desktop.webp');
+    }
+}
+.avif .base__imagen {
+    background-image: url('../img/hero-mobile.avif');
+    @include m.tablet { 
+        background-image: url('../img/hero-desktop.avif');
+    }
+}

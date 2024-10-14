@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.webp">
+  <title>Frontend Mentor | Base Apparel coming soon page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+  <div class="logo contenedor">
+    <img src="img/logo.svg" alt="logo base-apparel">
+  </div>
+  
+  <main class="base">
+    <div class="base__flex">
+      <div class="base__contenido contenedor">
+        <h1 class="base__heading">
+          <span>We're</span>
+          coming soon
+        </h1>
+        
+        <p class="base__texto">
+          Hello fellow shoppers! We're currently building our new fashion store. 
+          Add your email below to stay up-to-date with announcements and our launch deals.
+        </p>
+    
+        <form id="formulario" class="formulario" novalidate>
+          <input id="email" class="formulario__input" type="email" name="email" placeholder="Email Address"/>
+          <button class="formulario__btn" type="submit">
+            <img src="img/icon-arrow.svg" alt="">
+          </button>
+        </form>
+        <p id="mensaje" class="formulario__mensaje">
+        </p>
+      </div>
+
+      <div class="base__imagen">
+
+      </div>
+    </div>
+  </main>
+  
+  <footer class="footer contenedor">
+    <p class="footer__attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://github.com/jorgecb10">Jorge Carranza</a>.
+    </p>
+  </footer>
+
+  <script src="js/app.js"></script>
+  <script src="js/imagenes.js"></script>
+</body>
+</html>
